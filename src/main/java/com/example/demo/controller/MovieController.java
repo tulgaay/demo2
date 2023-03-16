@@ -15,15 +15,15 @@ public class MovieController {
     public Movie saveMovie(@RequestBody Movie movie){
         return movieService.saveMovie(movie);
     }
-    @DeleteMapping("/movie")
-    public void deleteMovie(@RequestBody Movie movie){
-        movieService.deleteMovie(movie);
 
-    }
+
+
     @GetMapping("/movie/{id}")
     public Optional<Movie> getMovieById(@PathVariable Long id) {
         return movieService.getMovieById(id);
     }
-
+    @DeleteMapping("/movie/{id}")
+    public void deleteDirector (@PathVariable Long id){
+        movieService.deleteMovie(id);}
 
 }

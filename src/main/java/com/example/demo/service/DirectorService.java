@@ -19,8 +19,8 @@ public class DirectorService {
         return directorRepository.save(director);
     }
 
-    public void deleteDirector(Director director) {
-        directorRepository.deleteById(director.getId());
+    public void deleteDirector(Long id) {
+        directorRepository.deleteById(id);
     }
 
     public List<Movie> getMovieList(Long directorId) {

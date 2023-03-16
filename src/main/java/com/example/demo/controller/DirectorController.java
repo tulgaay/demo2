@@ -16,10 +16,11 @@ public class DirectorController {
     public Director saveDirector(@RequestBody Director director){
         return directorService.save(director);
     }
-    @DeleteMapping("/director")
-    public void deleteDirector (@RequestBody Director director){
-        directorService.deleteDirector(director);
-    }
+
+
+    @DeleteMapping("/director/{id}")
+    public void deleteDirector (@PathVariable Long id){
+        directorService.deleteDirector(id);}
     //@GetMapping("/director/{id}/movie")
     //public ResponseEntity<List<Movie>> getMoviesByDirector(@PathVariable Long directorId) {
         //List<Movie> movies = directorService.getMovieList(directorId);
