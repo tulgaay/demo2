@@ -31,5 +31,9 @@ public class DirectorService {
         }
         return new ArrayList<>();
     }
+
+    public Optional<Director> findDirectorbyId(Long id) {
+        return directorRepository.findById(id);
     }
+}
 
