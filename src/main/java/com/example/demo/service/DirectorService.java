@@ -35,5 +35,9 @@ public class DirectorService {
     public Optional<Director> findDirectorbyId(Long id) {
         return directorRepository.findById(id);
     }
+
+    public Director updateExistingDirector(Director director) {
+        return directorRepository.save(director);
+    }
 }
 

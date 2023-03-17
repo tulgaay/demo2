@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Director;
+import com.example.demo.model.Movie;
 import com.example.demo.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +30,11 @@ public class DirectorController {
     @GetMapping("/director/{id}")
     public Optional<Director> findDirectorbyId (@PathVariable Long id) {
         return directorService.findDirectorbyId(id);
+    }
+
+    @PutMapping("/director")
+    public Director updateExistingDirector(@RequestBody Director director){
+        return directorService.updateExistingDirector(director);
+
     }
 }
