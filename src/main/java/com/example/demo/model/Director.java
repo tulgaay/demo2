@@ -13,6 +13,7 @@ public class Director {
     private Long id;
     private String name;
     private String gender;
+    @JsonManagedReference
     @OneToMany (mappedBy = "director")
     private List<Movie> movieList = new ArrayList<>();
 

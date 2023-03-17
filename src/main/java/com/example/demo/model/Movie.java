@@ -23,7 +23,7 @@ public class Movie {
     public void setDirector(Director director) {
         this.director = director;
     }
-
+    @JsonBackReference
     @ManyToOne
     private Director director;
 
